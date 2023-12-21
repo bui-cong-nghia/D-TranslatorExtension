@@ -3,7 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Translator Extension</title>
   </head>
-  <body></body>
+  <body>
+    <label for="inputText">Your Text: </label>
+    <textarea
+      id="inputText"
+      cols="30"
+      rows="10"
+      placeholder="Type text here..."
+    ></textarea>
+
+    <div>
+      <label for="translateFrom">Translate From:</label>
+      <select id="translateFrom">
+        <option value="en">English</option>
+      </select>
+      <label for="translateTo">Translate To:</label>
+      <select id="translateTo">
+        <option value="vi">Vietnamese</option>
+      </select>
+    </div>
+
+    <button id="translateBtn">Translate</button>
+    <button id="speakBtn">Speak</button>
+    <div id="outputText" aria-readonly="true"></div>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
